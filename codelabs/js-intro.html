@@ -1,0 +1,171 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <script src="../js/menu.js"></script>
+  <link rel="import" href="../bower_components/polymer/polymer.html">
+  <link rel="import" href="../codelab_components/codelab-codelab/codelab-codelab.html">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/shadowdom-shim.css" shim-shadowdom>
+  <link rel="shortcut icon" href="../img/favicon.png">
+</head>
+<body unresolved>
+
+  <codelab-codelab label="Introduction to Programming on JSFiddle!(JavaScript)"
+      feedback_link="#"
+        category="Intermediate"
+
+
+        environment="web"
+    >
+
+
+      <codelab-step
+        label="Overview"
+        duration="2:00">
+        <p><h2>What is JavaScript(JS)?</h2><br>
+            <p>An object-oriented programming language commonly used to create interactive effects within web browsers.</p><p>
+            Well Javascript along with other unimportant(currently) stuff is what is helping me through this Hour of Code(HOC).<br>Programming is the process of giving a computer a series of instructions, or in other words, telling a computer what to do, and how to do it.</p>
+            <p>You can give a computer instructions by typing code like we'll do in <strong>JavaScript(JS)</strong></p>
+            <p><img src="https://camo.githubusercontent.com/4c89eba0ea60cfba38f3404d501e268d13c809ba/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f343431363935322f323035393633332f31613163376138342d386263332d313165332d386636332d6461336532663131383465342e676966" style="max-width: 50%"></p>
+        </p>
+        <p>It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+
+<p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+
+<strong>Client-side JavaScript: </strong> extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.<br>
+<strong>Server-side JavaScript: </strong> extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</p>
+
+<p>In the next step, we will start programming with JS and eventually develop a small game called "Bounce" using JS!</p>
+
+      </codelab-step>
+
+
+
+      <codelab-step
+        label="BASIC JS"
+        duration="10:00">
+        <h1>Getting Started With Programming</h1>
+        <p><strong>Please Note:</strong> If Internet speeds are hurt, please use NOTEPAD on your computer to continue or ask any of the volunteers to help you out.</p>
+        <h2>Getting to Know JSFiddle.net</h2>
+        <p>So JSFiddle is this place where developers like you and me would go to make amazing JS Apps for everyone to use! Go to <a href="http://jsfiddle.net/">jsfiddle.net</a> and get familiar with the environment.</p>
+        <h1>What's your name?</h1>
+        <p>
+          TYPE ----->| document.write("yourName"); | and see what pops up on the result screen.
+        </p>
+
+        <h1>How Long is your name?</h1>
+        <p>TYPE ----->| document.write("yourName".length); |</p>
+        <p>This could be done n-number of times so play around with it for while.</p>
+        <h1>Let's do some math now.</h1>
+        <p>You You can add, subtract, multiply, and divide numbers in JavaScript, like this:<br>
+            Addition: 2 + 3<br>
+            Subtraction: 6 - 3<br>
+            Multiplication: 3 * 4<br>
+            Division: 10 / 5</p>
+        <p>TYPE ----->| document.write(123+12313); |</p>
+        <h3>Next up, calculate the length of the answer you obtain</h3>
+        <h1>Next, we'll learn about BOOLEAN(S)!
+        </h1>
+        <p>A boolean is like a light switch. It can only have two values. Just like a light switch can only be <b>on or off</b>, a boolean can only be true or false.
+<br>
+         You can use boolean(s) in your code by writing statements that evaluate to true or false, like this:
+<br>
+          10 > 3 evaluates to true<br>
+5 < 4 is just crazy talk, so it evaluates to false<br>
+Boolean(s) are extremely useful because they let us run certain parts of our code only if certain conditions are true. We'll see how to do this in this section.</p><br>
+<p>TYPE----->|Write a statement that evaluates to true if the length of the string "I'm coding like a champ" is greater than 10 characters.|</p>
+      </codelab-step>
+
+      <codelab-step
+        label="Programmer-Level2"
+        duration="10:00">
+        <h1>Going to Level 2</h1>
+        <p>So far, we've been typing in <b>strings</b>, <b>numbers</b>, and <b>boolean(s)</b> into the editor. To do more complex coding, we need a way to <b>"save"</b> these values. We can do this using variables. A variable stores a string, number, or boolean, and gives it a specific, case-sensitive name.
+<br>
+<p>Examples:</p><br>
+<pre>
+var myName = "Boy";<br>
+var myAge = 32;<br>
+var isEven = true;
+</pre>
+<h3>Instructions</h3>
+In line 1, create a variable called myName and type in your name.</p>
+        <h3>Arrays</h3>
+        <p>Variables, like myName, can store numbers or strings. But so far, we've only been able to store one number or one string at a time. Good thing we have arrays. <b>Arrays</b> store lists of data.
+          <p>Examples:</p>
+<pre>
+var names = ["Boy", "Girl", "Blue Ivy"];
+var blue = [196, 77, 55];</pre>
+<p>
+Anytime you see data surrounded by [ ], it is an array.
+<br>In fact, computers can understand colors like blue as an array of numbers.
+</p>
+<strong>Instructions</strong>
+<p>Make an array that holds your FULL Name. (First, Middle, Last Name)</p>
+        <h3>Functions</h3>
+
+         <p>A function takes in an input, does something with it, and then returns an output. </p>
+         <p>We can define a function like this: <br>
+<pre>function myFunction(){
+  document.write(12+23);
+}</pre></p>
+         <br><p>After this is done. What we've done is just the <strong>Function Defintion</strong></p>
+         <p>We need to place a function <strong>call</strong> like this ---> myFunction(); and the contents after data processed in the function displayed or whatever.</p>
+<h4>Instructions</h4>
+<p>Make a function of your choice and place the function call after it.</p>
+      </codelab-step>
+
+
+
+
+
+      <codelab-step
+        label="V2.2"
+        duration="15:00">
+
+          <h1>Jumping Into Level 3</h1>
+          <h2>getElementById()</h2>
+          <p>Now that is a very important function available in JS. Just by refering to the <b>id</b> of an html element we'll be able to affect the website.</p>
+          <h3>Instructions</h3>
+          <p>Type the following code in the space given for HTML</p>
+<pre>
+&lt;button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()"&gt;
+Click me to display Date and Time.&lt;/button&gt;
+&lt;p id="demo">&lt;/p&gt;
+</pre> <br>
+<p>Once you're done doing that, try using different id's and different HTML elements see how things change.</p>
+      </codelab-step>
+
+      <codelab-step
+        label="Build Bounce"
+        duration="20:00">
+
+          <iframe width="100%" height="300" src="//jsfiddle.net/end3r/redj37dc/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+          <p>Go through the above given project and try doing it yourself by changing the id's, colors, elements.
+            <br> Go on and explore with what you've learnt this session.</p>
+
+      </codelab-step>
+
+      <codelab-step
+        label="Congratulations!"
+        duration="3:00">
+
+        <p>
+          You can now call yourself a JS Ninja! By now, you have successfully learnt a few concepts of javascript, and should have got an idea, as to how JS can be used to manipulate HTML elements.
+      </p>
+        <p>
+          While this isn't an in-depth introduction to JS, we hope it will has given you an insight into the world of JS, and Programming.
+          We encourage you to check out other projects at <a href="https://codepen.io" target="_blank">Codepen</a> and check out their source codes.
+          All the best!
+        </p>
+      </codelab-step>
+
+
+  </codelab-codelab>
+</body>
+</html>

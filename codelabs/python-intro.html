@@ -1,0 +1,458 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <script src="../js/menu.js"></script>
+  <link rel="import" href="../bower_components/polymer/polymer.html">
+  <link rel="import" href="../codelab_components/codelab-codelab/codelab-codelab.html">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/shadowdom-shim.css" shim-shadowdom>
+  <link rel="shortcut icon" href="../img/favicon.png">
+</head>
+<body unresolved>
+
+  <codelab-codelab label="Introduction to Programming with Python!"
+      feedback_link="#"
+        category="Advanced"
+
+
+        environment="web"
+    >
+
+
+      <codelab-step
+        label="Overview"
+        duration="2:00">
+        <p><h2>What is python?</h2><br>
+            Python is a general purpose programming language, with a wide range of applications. There is a world of libraries and frameworks available for Python, that can be used to solve complex machine learning problems
+            or develop mobile applications.</p>
+        <p>
+          Some of Python's notable features:
+          <ul>
+            <li>Uses an elegant syntax, making the programs you write easier to read.
+            <li>Is an easy-to-use language that makes it simple to get your program working. This makes Python ideal for prototype development and other ad-hoc programming tasks, without compromising maintainability.
+            <li>Comes with a large standard library that supports many common programming tasks such as connecting to web servers, searching text with regular expressions, reading and modifying files.
+            <li>Python's interactive mode makes it easy to test short snippets of code. There's also a bundled development environment called IDLE.</li>
+            <li>Is easily extended by adding new modules implemented in a compiled language such as C or C++.</li>
+            <li>Can also be embedded into an application to provide a programmable interface.</li>
+            <li>Runs on many different computers and operating systems: Windows, MacOS, many brands of Unix, OS/2, ...</li>
+          </ul>
+        </p>
+        <p>Being an interpreted language, python doesn't require compilation. Code/Scripts are executed line by line. Unlike C++ or Java, python doesn't produce an object file or executable.
+        We directly run the script on a python interpreter. In this code lab we will use an online interpreter available at <a href="https://repl.it/languages/python" target="_blank">repl.it</a> </p>
+        <p>In the next step, we will dive right in and explore some basic syntax of python.</p>
+
+      </codelab-step>
+
+
+
+      <codelab-step
+        label="Hello Python"
+        duration="10:00">
+        <p>
+          We'll start with some basic python syntax. What better way to begin than the classic "Hello World"?
+          Head over to <a href="https://repl.it/languages/python" target="_blank">repl.it</a></p>
+          <p>
+            On the prompt at the right, type in the following code.
+          </p>
+          <p><code>print "Hello World!"</code><br>It should look like:</p>
+          <p><img src="../img/py-intro/img-1.png" style="max-width:100%" /><br>Press enter to run the line of code.</p>
+          <p>
+            On running it, you should see a pretty boring hello world message in the console window.<br>You will also see <code>=> None</code> this is the return value of the print statement, which is basically none.<br>
+            Lets print a few more things to see how easy it is in python to display stuff. Try out the following:<br>
+            <code>print "Printing 3 times " * 3</code><br>
+            <code>print "Concatenating " + "Strings"</code><br>
+            <code>print "This is a string" + 'So is this!'</code> Notice how " " and ' '  are inter-changable in python
+          </p>
+          <p>
+            The window on the right (in black) is the interpreter, and the left white editor, is the script editor.
+            Python Scripts are still run line by line, but you can write a long piece of code in a file and save it, much like a .c or .c++ file<br>
+            The difference here is that the .py file (python scripts have a .py extension) is directly run on the interpreter, instead of compiling and then running.
+          </p>
+
+          <h2>Variables</h2>
+          <p>
+            Python is a dynamic, interpreted (bytecode-compiled) language. There are no type declarations of variables, parameters, functions, or methods in source code. This makes the code short and flexible, and you lose the compile-time type checking of the source code. Python tracks the types of all values at runtime and flags code that does not make sense as it runs.
+          </p>
+          <p>
+            <br>Creating Variables is as simple as giving it a name and assigning a value. Python, unlike c++ or java doesn't require you declare variables in advance, before using it.
+            <br><code>myVariable = "Something cool!"</code><br>The above code can be typed into interpreter, and this will store the string in variable called myVariable.<br>
+            You can check what's stored by printing the variable using: <br><code>print "myVariable Contains: " + myVariable</code>
+            <br>You can store other things in variables like integers, floating point values, boolean values, etc. Try the following:<br>
+<pre>
+x = 10
+pi = 3.14
+booleanVar = true
+type(x)
+type(pi)
+type(booleanVar)
+</pre>
+              The above code will display the types of the 3 variables we create. type( ) is a function that can be used to check the type of a variable.<br>
+              Various operations that can be performed on integers or floating variables like addition, subtraction, multiplication, exponentiation etc. For example:<br>
+              <code>print 3+2</code><br>
+              <code>print 3.14*2</code><br>
+              <code>print 2**3</code><br>
+              <code>print 10/5</code><br>
+              <code>print 14.2/3.0</code><br>
+              <code>print 10-5/2+4</code><br>
+              <code>x = 24</code><br>
+              <code>y = input("Enter a number:")</code><br>
+              <code>print y</code><br>
+          </p>
+          <p>
+            The code <code>y = input("...")</code> uses the input() function to store an integer into the variable y. input() takes 1 parameter, the prompt string to ask for input.
+            <br>To store input for string variables, we can use raw_input("Input Prompt:") instead of just input("..")
+          </p>
+          <h2>Conditions and Indentation</h2>
+          <p>
+            One unusual Python feature is that the whitespace indentation of a piece of code affects its meaning. A logical block of statements such as the ones that make up a function/if condition/loop, etc should all have the same indentation, set in from the indentation of their parent function or "if" or whatever. If one of the lines in a group has a different indentation, it is flagged as a syntax error.
+          </p>
+          <p>
+            For example, consider the following if condition in python:
+<pre>
+food = 'chocolate'
+## print only if food is chocolate
+if food == 'chocolate':
+    print 'Chocolates are awesome!'
+    print('Give me more!')
+else:
+    print ('I do not like ' + food)
+</pre>
+            You can try it by pasting it in the script editor on the left, and clicking the run button.</p>
+            <p><img src="../img/py-intro/img-2.png" style="max-width:100%" /><p>
+            <p>
+              The above image shows an example where we have stored 'butter' in food. Hence the if fails and else part is executed.
+              <br>The '#' symbol can be used to write comments.
+              <br>In Python, indentation matters a lot. Hence everything that is under the if under the same indentation, is part of the if block.
+            </p>
+            <p>
+              If conditions use boolean expressions who's result determines whether or not a piece of code is executed.
+              <br>A boolean expression (or logical expression) evaluates to one of two states true or false. Python provides the boolean type that can be either set to <b>False</b> or <b>True</b>. Many functions and operations returns boolean objects.
+              <br>The not keyword can also be used to inverse a boolean type.
+              <br><code>not True</code> will return <code>False</code>
+              <br>The following values evaluate to False:<br>
+              <ul>
+              <li>None</li>
+              <li>False</li>
+              <li>0  (whatever type from integer, float to complex)</li>
+              <li>Empty collections: “”, (), [], {}</li>
+              <li>Objects from classes that have the special method __nonzero__</li>
+              <li>Objects from classes that implements __len__ to return False or zero</li>
+              </ul>
+              <strong>Conditional operators</strong>
+              <p>
+                The <, <=, >, >=, ==, != operators compare the values of 2 objects and returns True or False.
+              </p>
+                <pre>
+<span >&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span >&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span>
+<span class="go">True</span>
+<span >&gt;&gt;&gt; </span><span class="mi">10</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">20</span>
+<span class="go">False</span>
+<span >&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">&gt;</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">2</span>
+<span class="go">True</span>
+<span >&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">==</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">4</span>
+<span class="go">True</span>
+                </pre>
+                The comparison is performed between each pair of terms to be evaluated. For instance in the first example, 1 < x is evaluated to True AND x < 3 is evaluated. It is not as if 1 < x is evaluated to True and then True < 3 is evaluated to True, Each term is evaluated once.
+
+            </p>
+            <p>Logical Operators</p>
+            <table border="1">
+            <colgroup>
+            <col width="23%">
+            <col width="77%">
+            </colgroup>
+            <thead valign="bottom">
+            <tr class="row-odd"><th class="head">operators</th>
+            <th class="head">descriptions</th>
+            </tr>
+            </thead>
+            <tbody valign="top">
+            <tr class="row-even"><td>not x</td>
+            <td>Returns True if x is True, False otherwise</td>
+            </tr>
+            <tr class="row-odd"><td>x and y</td>
+            <td>Returns x if x is False, y otherwise</td>
+            </tr>
+            <tr class="row-even"><td>x or y</td>
+            <td>Returns y if x is False, x otherwise</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>
+              Proceed to the next step.
+            </p>
+
+      </codelab-step>
+
+      <codelab-step
+        label="Iteration"
+        duration="10:00">
+        <p>
+          Computers are often used to automate repetitive tasks. Repeating identical or similar tasks without making errors is something that computers do well and people do poorly.
+          Repeated execution of a set of statements is called iteration. Python has two statements for iteration – the for statement, which we met last chapter, and the while statement.
+          Before we look at those, we need to review a few ideas.
+        </p>
+        <p>
+           In Python, it is legal to make more than one assignment to the same variable. A new assignment makes an existing variable refer to a new value (and stop referring to the old value).
+        </p>
+        <code>
+        bruce = 5<br>
+        print(bruce)<br>
+        bruce = 7<br>
+        print(bruce)<br>
+        </code>
+        <p>
+          The above code will print 5 and then 7.
+        </p>
+        <p>
+          <h3>The <code>for</code> loop</h3>
+          <br>
+          The general form of a <code>for</code> loop is:<br>
+          <pre>
+for LOOP_VARIABLE in SEQUENCE:
+    STATEMENTS
+          </pre>
+        </p>
+        <p>
+          The loop variable is created when the for statement runs, so you do not need to create the variable before then. Each iteration assigns the the loop variable to the next element in the sequence, and then executes the statements in the body. The statement finishes when the last element in the sequence is reached.
+        </p>
+        <p>
+          You can use the in-built range() method to create a sequence. For example <code>range(5)</code> will give you a list from 0 to 4.
+          <br>The code below prints 1 to 10.
+        </p>
+        <pre>
+for i in range(11):
+    print i
+        </pre>
+        <p>
+          <h3>The <code>while</code> loop</h3>
+          <br>
+          The general form of a <code>while</code> loop is:<br>
+          <pre>
+while CONDITION:
+    STATEMENTS
+          </pre>
+        </p>
+
+        <pre>
+number = 0
+prompt = "What is the meaning of life, the universe, and everything? "
+
+while number != "42":
+    number =  input(prompt)
+        </pre>
+        <p>
+          Notice that if number is set to 42 on the first line, the body of the while statement will not execute at all.
+          <br>A short hand often used to update variables is of the form += or -= or *= etc, example: <code>count += 1</code> is an abreviation for <code>count = count + 1</code> .
+        </p>
+
+
+      </codelab-step>
+
+
+
+
+
+      <codelab-step
+        label="Strings"
+        duration="20:00">
+
+          <h1></h1>
+          <p>
+            Python has a built-in string class named "str" with many handy features (there is an older module named "string" which you should not use). String literals can be enclosed by either double or single quotes, although single quotes are more commonly used. Backslash escapes work the usual way within both single and double quoted literals -- e.g. \n \' \". A double quoted string literal can contain single quotes without any fuss (e.g. "I didn't do it") and likewise single quoted string can contain double quotes. A string literal can span multiple lines, but there must be a backslash \ at the end of each line to escape the newline. String literals inside triple quotes, """" or ''', can multiple lines of text.
+          </p>
+          <p>
+            Python strings are "immutable" which means they cannot be changed after they are created (Java strings also use this immutable style). Since strings can't be changed, we construct *new* strings as we go to represent computed values. So for example the expression ('hello' + 'there') takes in the 2 strings 'hello' and 'there' and builds a new string 'hellothere'.
+          </p>
+          <p>
+            Characters in a string can be accessed using the standard [ ] syntax, and like Java and C++, Python uses zero-based indexing, so if str is 'hello' str[1] is 'e'. If the index is out of bounds for the string, Python raises an error. The Python style (unlike Perl) is to halt if it can't tell what to do, rather than just make up a default value. The handy "slice" syntax (below) also works to extract any substring from a string. The len(string) function returns the length of a string. The [ ] syntax and the len() function actually work on any sequence type -- strings, lists, etc.. Python tries to make its operations work consistently across different types. Python newbie gotcha: don't use "len" as a variable name to avoid blocking out the len() function. The '+' operator can concatenate two strings. Notice in the code below that variables are not pre-declared -- just assign to them and go.
+          </p>
+          <pre>
+s = 'hi'
+print s[1]          ## i
+print len(s)        ## 2
+print s + ' there'  ## hi there
+          </pre>
+          <p>
+            Unlike Java, the '+' does not automatically convert numbers or other types to string form. The str() function converts values to a string form so they can be combined with other strings.
+          </p>
+          <pre>
+pi = 3.14
+##text = 'The value of pi is ' + pi      ## NO, does not work
+text = 'The value of pi is '  + str(pi)  ## yes
+          </pre>
+          <p>
+            For numbers, the standard operators, +, /, * work in the usual way. There is no ++ operator, but +=, -=, etc. work. If you want integer division, it is most correct to use 2 slashes -- e.g. 6 // 5 is 1 (previous to python 3000, a single / does int division with ints anyway, but moving forward // is the preferred way to indicate that you want int division.)
+          </p>
+          <p>
+          The "print" operator prints out one or more python items followed by a newline (leave a trailing comma at the end of the items to inhibit the newline). A "raw" string literal is prefixed by an 'r' and passes all the chars through without special treatment of backslashes, so r'x\nx' evaluates to the length-4 string 'x\nx'. A 'u' prefix allows you to write a unicode string literal (Python has lots of other unicode support features -- see the docs below).
+          </p>
+          <pre>
+raw = r'this\t\n and that'
+print raw     ## this\t\n and that
+multi = """It was the best of times.
+It was the worst of times. This is a multiline Comment"""
+          </pre>
+          <p>
+            Here are some of the most common string methods. A method is like a function, but it runs "on" an object. If the variable s is a string, then the code s.lower() runs the lower() method on that string object and returns the result (this idea of a method running on an object is one of the basic ideas that make up Object Oriented Programming, OOP). Here are some of the most common string methods:
+          </p>
+          <ul>
+          <li> s.lower(), s.upper() -- returns the lowercase or uppercase version of the string</li>
+          <li> s.strip() -- returns a string with whitespace removed from the start and end</li>
+          <li> s.isalpha()/s.isdigit()/s.isspace()... -- tests if all the string chars are in the various character classes</li>
+          <li> s.startswith('other'), s.endswith('other') -- tests if the string starts or ends with the given other string</li>
+          <li> s.find('other') -- searches for the given other string (not a regular expression) within s, and returns the first index where it begins or -1 if not found</li>
+          <li> s.replace('old', 'new') -- returns a string where all occurrences of 'old' have been replaced by 'new'</li>
+          <li> s.split('delim') -- returns a list of substrings separated by the given delimiter. The delimiter is not a regular expression, it's just text. 'aaa,bbb,ccc'.split(',') -&gt; ['aaa', 'bbb', 'ccc']. As a convenient special case s.split() (with no arguments) splits on all whitespace chars.</li>
+          <li> s.join(list) -- opposite of split(), joins the elements in the given list together using the string as the delimiter. e.g. '---'.join(['aaa', 'bbb', 'ccc']) -&gt; aaa---bbb---ccc</li>
+          </ul>
+          <h3>String Slices</h3>
+          <p>
+            The "slice" syntax is a handy way to refer to sub-parts of sequences -- typically strings and lists. The slice s[start:end] is the elements beginning at start and extending up to but not including end. the Suppose we have s = "Hello"
+          </p>
+          <ul>
+          <li> s[1:4] is 'ell' -- chars starting at index 1 and extending up to but not including index 4
+
+             </li><li> s[1:] is 'ello' -- omitting either index defaults to the start or end of the string
+
+             </li><li> s[:] is 'Hello' -- omitting both always gives us a copy of the whole thing (this is the pythonic way to copy a sequence like a string or list)
+
+             </li><li> s[1:100] is 'ello' -- an index that is too big is truncated down to the string length
+          </li></ul>
+          <p>
+            The standard zero-based index numbers give easy access to chars near the start of the string. As an alternative, Python uses negative numbers to give easy access to the chars at the end of the string: s[-1] is the last char 'o', s[-2] is 'l' the next-to-last char, and so on. Negative index numbers count back from the end of the string
+          </p>
+          <ul>
+          <li> s[-1] is 'o' -- last char (1st from the end)
+
+             </li><li> s[-4] is 'e' -- 4th from the end
+
+             </li><li> s[:-3] is 'He' -- going up to but not including the last 3 chars.
+
+             </li><li> s[-3:] is 'llo' -- starting with the 3rd char from the end and extending to the end of the string.
+          </li></ul>
+          <p>
+            Lets try and solve an exercise:<br>
+            Assume s is a string of lower case characters.<br>
+            Write a program that counts up the number of vowels contained in the string s. Valid vowels are: 'a', 'e', 'i', 'o', and 'u'. For example, if s = 'azcbobobegghakl', your program should print:
+            <br><code>Number of vowels: 5</code>
+          </p>
+          <p>
+            The solution can be found in the next step.
+          </p>
+      </codelab-step>
+      <codelab-step
+        label="Programs using Strings"
+        duration="10:00">
+        <p>
+          The solution to the problem posed in the previous step, to find vowels in a string of lwercase characters:
+        </p>
+        <pre>
+s = raw_input("Enter a lowercase string:")
+numVowels = 0
+for char in s:
+   if char == 'a' or char == 'e' or char == 'i' \
+      or char == 'o' or char == 'u':
+       numVowels += 1
+
+print 'Number of vowels: ' + str(numVowels)
+        </pre>
+        <p>
+          Try and understand how this code works, and how the characters in s are being checked in the if condition.( the \ is used as our condition is split across lines)
+        </p>
+        <p>
+          Now try write a program to count the number of times the string "khmd" occurs in a string s. For example:<br>
+          If s = "abczsdkhmdasdkhmdmlkwe", then your code should output:<br><code>Number of khmd occurances: 2</code>
+          <br>Make sure you take input for s from the user using raw_input()
+        </p>
+        <p>
+          We will show you the solution to this problem after the next step where we will extend it slightly.
+        </p>
+
+      </codelab-step>
+
+      <codelab-step
+        label="Functions"
+        duration="5:00">
+        <pre>
+def compute_surface(radius):
+    from math import pi
+    return pi* radius * radius
+        </pre>
+        <p>
+          To define a function, just precede the keyword def before the name of the function and add a column after it. The function definition is then followed by a block of statements.
+        </p>
+        <p>The final line in the block of statement can start with the keyword return if you want to return something. If there is no return statement, the default behaviour of a function consists in returning the object None.</p>
+        <p>
+          Can be called using <code>surface = compute_surface(1.2)</code>
+        </p>
+        <h3>Extending the strings problem!</h3>
+        <p>
+          Recall the strings question we posed in the previous step, to calculate number of occurrences of the string 'khmd' in a string s.
+          <br>
+          Now try and implement this using a function, that takes two parameters, the string s, and a string called key. Your function should return an integer, ie. the number of times key occurs in s.
+          <br>
+          You can find the solution to this in the next step, but we encourage you to try it on your own first.
+        </p>
+
+      </codelab-step>
+      <codelab-step
+        label="Strings Solution">
+<pre>
+def countkey(s,key):
+  count = 0
+  for i in range(len(s)):
+   if(s[i:].startswith(key)):
+      count+=1
+  return count
+s = raw_input("Enter String:")
+key = raw_input("Key: ")
+print 'Number of times '+ key + ' occurs is: ' + str(countkey(s,key))
+</pre>
+      <p>
+        If time permits, we encourage you to try and solve this challenge, to which we will not be providing a solution in this session.<br>
+        <h3>Problem</h3>
+        Assume s is a string of lower case characters.
+        <br>Write a program that prints the longest substring of s in which the letters occur in alphabetical order. For example, if s = 'azcbobobegghakl', then your program should print
+        <br><code>Longest substring in alphabetical order is: beggh</code>
+        <br>In the case of ties, print the first substring. For example, if s = 'abcbcd', then your program should print
+        <br><code>Longest substring in alphabetical order is: abc</code>
+      </p>
+      </codelab-step>
+
+      <codelab-step
+        label="Congratulations!"
+        duration="3:00">
+
+        <p>
+          You have now completed a basic introduction to Python!
+          So far, We've covered:
+        </p>
+        <ul>
+          <li>Variables and Operators</li>
+          <li>Conditions</li>
+          <li>Iteration</li>
+          <li>Strings</li>
+          <li>Functions</li>
+        </ul>
+        <p>
+          While this isn't an in-depth introduction to python, we hope it has given you an idea as to how Python works, and how to write a few simple scripts using python.
+          We encourage you to explore additional resources and codelabs related to python.<br>
+          Some resources you might like are:<br>
+          <ul>
+          <li>
+            Codeacademy has a range of engaging python tutorials that you can find at <a href="https://www.codecademy.com/learn/python"> Codeacademy Python Series</a></li>
+          <li><a href="https://developers.google.com/edu/python/">Google's Python Class</a></li>
+          </ul>
+          We hope this hour of code session was helpful and informative! We wish you all the best.
+        </p>
+      </codelab-step>
+
+
+  </codelab-codelab>
+</body>
+</html>
